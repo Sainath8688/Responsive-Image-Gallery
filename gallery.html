@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive image gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;  /* resets default box sizing of elements */
+        }
+        body {
+            margin: 0; /* sets the body element's margin to 0 */
+        }
+        .row {
+            display: flex; /* sets the display property to flexbox for a more flexible layout */
+            flex-wrap: wrap; /* allows elements to wrap onto multiple lines if they don't fit on a single line*/
+
+            padding:0 10px;
+        }
+        .column {
+            flex: 25%; /* assigns a flex-basis of 25% to each column, making them occupy roughly equal space within the row.*/
+            max-width: 25%; /* sets a maximum width of 25% to ensure columns don't overflow.*/
+            padding:0 4px; /* adds a small amount of padding around the content within each column.*/
+        }
+        .column img {
+            width: 100%;  /* Image width will be 100% in column space */
+            margin-top:8px; /*adds a small margin at the top of the images. */
+          vertical-align: middle;  /* vertically aligns the images to the middle of their container elements. */
+        }
+        @media screen and (max-width:800px) {
+            .column {
+                flex:50%;  /* assigns a flex-basis of 50% to each column, making them occupy roughly equal space within the row.*/
+                max-width:50%;  /* sets a maximum width of 50% to ensure columns don't overflow.*/
+            }    
+        }
+        @media screen and (max-width:450px) {
+            .column {
+                flex:100%;  /* assigns a flex-basis of 100% to each column, making them occupy roughly equal space within the row.*/
+                max-width:100%;  /* sets a maximum width of 100% to ensure columns don't overflow.*/
+            } 
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="column">
+            <img src="1.jpg">
+            <img src="2.jpg" >
+            <img src="3.jpg">
+        </div>
+        <div class="column">
+            <img src="4.png" alt="">
+            <img src="5.jpeg" alt="">
+            <img src="6.jpg" alt="">
+            <img src="7.jpg" alt="">
+        </div>
+        <div class="column">
+            <img src="8.jpg" alt="">
+            <img src="9.jpg" alt="">
+            <img src="10.jpg" alt="">
+            <img src="11.jpg" alt="">
+        </div>
+        <div class="column">
+            <img src="12.jpg" alt="">
+            <img src="13.jpg" alt="">
+            <img src="14.jpg" alt="">
+        </div>
+    </div>   
+</body>
+</html>
